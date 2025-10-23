@@ -1,245 +1,259 @@
 /* 🎨 RESET */
 * {
-    margin: 0;
-    padding: 0;
+    margin    : 0;
+    padding   : 0;
     box-sizing: border-box;
 }
 
 /* 🌈 Màu chủ đạo */
 :root {
-    --green: #00a651;
+    --green : #00a651;
     --yellow: #f9d342;
-    --white: #ffffff;
-    --gray: #f2f2f2;
-    --dark: #1a1a1a;
+    --white : #ffffff;
+    --gray  : #f2f2f2;
+    --dark  : #1a1a1a;
 }
 
 /* BODY */
 body {
-    font-family: "Segoe UI", Arial, sans-serif;
-    background: linear-gradient(135deg, var(--white), var(--yellow));
-    min-height: 100vh;
-    display: flex;
+    font-family   : "Segoe UI", Arial, sans-serif;
+    background    : linear-gradient(135deg, var(--white), var(--yellow));
+    min-height    : 100vh;
+    display       : flex;
     flex-direction: column;
-    color: var(--dark);
+    color         : var(--dark);
 }
 
 /* HEADER */
 header {
-    display: flex;
+    display    : flex;
     align-items: center;
-    padding: 10px 30px;
-    background: var(--green);
-    color: var(--white);
+    padding    : 10px 30px;
+    background : var(--green);
+    color      : var(--white);
 }
 
 .logo {
-    display: flex;
+    display    : flex;
     align-items: center;
 }
 
-    .logo img {
-        width: 40px;
-        height: auto;
-        margin-right: 20px;
-    }
+.logo img {
+    width       : 40px;
+    height      : auto;
+    margin-right: 20px;
+}
 
 /* MENU */
 nav {
-    display: flex;
+    display    : flex;
     align-items: center;
-    gap: 6px;
+    gap        : 6px;
     margin-left: 30px;
 }
 
-    nav a {
-        text-decoration: none;
-        font-weight: 600;
-        font-size: 1.15em;
-        color: var(--white);
-        transition: 0.3s;
-    }
+nav a {
+    text-decoration: none;
+    font-weight    : 600;
+    font-size      : 1.15em;
+    color          : var(--white);
+    transition     : 0.3s;
+}
 
-        nav a:hover {
-            color: var(--yellow);
-            text-shadow: 0 0 6px rgba(255, 255, 255, 0.6);
-        }
+nav a:hover {
+    color      : var(--yellow);
+    text-shadow: 0 0 6px rgba(255, 255, 255, 0.6);
+}
+
 nav .dangky::hover {
     background-color: var(--green);
-    color: var(--yellow);
+    color           : var(--yellow);
 }
 
 /* MAIN - căn giữa và tạo khoảng cách lớn với footer */
 main {
-    flex: 1;
-    display: flex;
-    justify-content: center; /* căn giữa ngang */
-    align-items: center; /* căn giữa dọc */
-    min-height: 90vh; /* tạo khoảng cách lớn để footer sang "trang mới" */
-    padding-bottom: 200px; /* đẩy footer xuống thêm */
+    flex           : 1;
+    display        : flex;
+    justify-content: center;
+    /* căn giữa ngang */
+    align-items    : center;
+    /* căn giữa dọc */
+    min-height     : 90vh;
+    /* tạo khoảng cách lớn để footer sang "trang mới" */
+    padding-bottom : 200px;
+    /* đẩy footer xuống thêm */
 }
 
 /* FORM */
 .register-box {
-    width: 500px; /* ⬅️ tăng khung to hơn (từ 380px → 500px) */
-    text-align: center;
-    background: var(--white);
-    border-radius: 20px; /* bo góc mềm hơn */
-    padding: 50px 40px; /* ⬅️ tăng khoảng trong khung */
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15); /* bóng nhẹ hơn, sâu hơn */
-    margin: 0 auto; /* đảm bảo căn giữa ngang */
-    margin-top: 60px;
+    width        : 500px;
+    /* ⬅️ tăng khung to hơn (từ 380px → 500px) */
+    text-align   : center;
+    background   : var(--white);
+    border-radius: 20px;
+    /* bo góc mềm hơn */
+    padding      : 50px 40px;
+    /* ⬅️ tăng khoảng trong khung */
+    box-shadow   : 0 6px 20px rgba(0, 0, 0, 0.15);
+    /* bóng nhẹ hơn, sâu hơn */
+    margin       : 0 auto;
+    /* đảm bảo căn giữa ngang */
+    margin-top   : 60px;
 }
 
 
-    /* Tiêu đề */
-    .register-box h2 {
-        font-weight: 700;
-        font-size: 1.5em;
-        margin-bottom: 25px;
-        color: var(--green);
-    }
+/* Tiêu đề */
+.register-box h2 {
+    font-weight  : 700;
+    font-size    : 1.5em;
+    margin-bottom: 25px;
+    color        : var(--green);
+}
 
-    /* Ô nhập */
-    .register-box input {
-        width: 100%;
-        padding: 14px 18px;
-        margin-bottom: 15px;
-        border: 2px solid var(--gray);
-        border-radius: 25px;
-        background-color: var(--gray);
-        font-size: 1em;
-        transition: 0.3s;
-    }
+/* Ô nhập */
+.register-box input {
+    width           : 100%;
+    padding         : 14px 18px;
+    margin-bottom   : 15px;
+    border          : 2px solid var(--gray);
+    border-radius   : 25px;
+    background-color: var(--gray);
+    font-size       : 1em;
+    transition      : 0.3s;
+}
 
-        .register-box input:focus {
-            outline: none;
-            border-color: var(--yellow);
-            box-shadow: 0 0 6px var(--yellow);
-        }
+.register-box input:focus {
+    outline     : none;
+    border-color: var(--yellow);
+    box-shadow  : 0 0 6px var(--yellow);
+}
 
-    /* Nút đăng ký */
-    .register-box button {
-        background-color: var(--yellow);
-        color: var(--dark);
-        border: none;
-        border-radius: 25px;
-        padding: 12px 40px;
-        font-weight: 700;
-        font-size: 1.05em;
-        cursor: pointer;
-        margin-top: 10px;
-        transition: 0.3s;
-    }
+/* Nút đăng ký */
+.register-box button {
+    background-color: var(--yellow);
+    color           : var(--dark);
+    border          : none;
+    border-radius   : 25px;
+    padding         : 12px 40px;
+    font-weight     : 700;
+    font-size       : 1.05em;
+    cursor          : pointer;
+    margin-top      : 10px;
+    transition      : 0.3s;
+}
 
-        .register-box button:hover {
-            background-color: var(--green);
-            color: var(--white);
-        }
+.register-box button:hover {
+    background-color: var(--green);
+    color           : var(--white);
+}
 
 /* ===================== */
 /* ===== FOOTER ===== */
 footer.footer {
     background-color: #ffffff;
-    color: #000;
-    font-family: "Segoe UI", Arial, sans-serif;
-    padding: 50px 5%;
-    border-top: 1px solid #ddd;
-    margin-top: auto; /* đẩy xuống cuối trang */
+    color           : #000;
+    font-family     : "Segoe UI", Arial, sans-serif;
+    padding         : 50px 5%;
+    border-top      : 1px solid #ddd;
+    margin-top      : auto;
+    /* đẩy xuống cuối trang */
 }
 
 .footer-container {
-    display: flex;
-    justify-content: center; /* căn giữa toàn bộ */
-    align-items: flex-start; /* ⬅️ chỉnh cho các cột chữ ngang hàng */
-    flex-wrap: wrap;
-    gap: 40px;
-    max-width: 1200px;
-    margin: 0 auto;
-    text-align: left; /* căn chữ đều bên trái cho gọn gàng hơn */
+    display        : flex;
+    justify-content: center;
+    /* căn giữa toàn bộ */
+    align-items    : flex-start;
+    /* ⬅️ chỉnh cho các cột chữ ngang hàng */
+    flex-wrap      : wrap;
+    gap            : 40px;
+    max-width      : 1200px;
+    margin         : 0 auto;
+    text-align     : left;
+    /* căn chữ đều bên trái cho gọn gàng hơn */
 }
 
 .footer-column {
-    flex: 1;
+    flex     : 1;
     min-width: 220px;
 }
 
-    .footer-column h3 {
-        font-size: 1rem;
-        font-weight: bold;
-        margin-bottom: 15px;
-        color: #000;
-        text-transform: uppercase;
-    }
-
-    .footer-column ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-    }
-
-    .footer-column li {
-        margin-bottom: 8px;
-    }
-
-    .footer-column a {
-        text-decoration: none;
-        color: #333;
-        font-size: 0.95rem;
-        transition: color 0.2s ease;
-    }
-
-        .footer-column a:hover {
-            color: var(--green);
-        }
-
-.footer-logos {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-bottom: 15px;
+.footer-column h3 {
+    font-size     : 1rem;
+    font-weight   : bold;
+    margin-bottom : 15px;
+    color         : #000;
+    text-transform: uppercase;
 }
 
-    .footer-logos img {
-        height: 35px;
-        border: 1px solid #eee;
-        border-radius: 4px;
-        padding: 4px;
-        background-color: #fff;
-        transition: transform 0.2s ease;
-    }
+.footer-column ul {
+    list-style: none;
+    padding   : 0;
+    margin    : 0;
+}
 
-        .footer-logos img:hover {
-            transform: scale(1.07);
-        }
+.footer-column li {
+    margin-bottom: 8px;
+}
+
+.footer-column a {
+    text-decoration: none;
+    color          : #333;
+    font-size      : 0.95rem;
+    transition     : color 0.2s ease;
+}
+
+.footer-column a:hover {
+    color: var(--green);
+}
+
+.footer-logos {
+    display        : flex;
+    justify-content: center;
+    flex-wrap      : wrap;
+    gap            : 10px;
+    margin-bottom  : 15px;
+}
+
+.footer-logos img {
+    height          : 35px;
+    border          : 1px solid #eee;
+    border-radius   : 4px;
+    padding         : 4px;
+    background-color: #fff;
+    transition      : transform 0.2s ease;
+}
+
+.footer-logos img:hover {
+    transform: scale(1.07);
+}
 
 .download {
-    display: flex;
+    display        : flex;
     justify-content: center;
-    align-items: center;
-    gap: 12px;
+    align-items    : center;
+    gap            : 12px;
 }
 
 .store-buttons {
-    display: flex;
+    display       : flex;
     flex-direction: column;
-    gap: 8px;
+    gap           : 8px;
 }
 
-    .store-buttons img {
-        height: 40px;
-        transition: transform 0.2s ease;
-    }
+.store-buttons img {
+    height    : 40px;
+    transition: transform 0.2s ease;
+}
 
-        .store-buttons img:hover {
-            transform: scale(1.05);
-        }
+.store-buttons img:hover {
+    transform: scale(1.05);
+}
 
 /* Dòng chữ cuối */
 .register-box p {
-    margin-top: 20px;
+    margin-top : 20px;
     font-weight: 500;
-    font-size: 0.95em;
-    color: var(--dark);
+    font-size  : 0.95em;
+    color      : var(--dark);
 }

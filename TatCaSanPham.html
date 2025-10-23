@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head runat="server">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tất Cả Sản Phẩm</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="styles/TatCaSanPham.css" />
+</head>
+
+<body>
+  <form id="form1" runat="server">
+
+    <!-- =================== HEADER =================== -->
+    <header>
+      <!-- Logo + Menu -->
+      <div class="header-left">
+        <a href="TrangChu.aspx">
+          <img src="Anh/AnhKhac/logo.jpg" alt="Logo" class="logo-img" />
+        </a>
+
+        <nav class="main-menu">
+          <a href="TrangChu.aspx">Trang chủ|</a>
+          <a href="#" class="active">Tất cả sản phẩm</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- =================== BANNER =================== -->
+    <section class="banner">
+      <div class="banner-box">
+        <img src="Anh/AnhKhac/Banner1.png" alt="QUẢNG CÁO" />
+      </div>
+    </section>
+
+    <!-- =================== DANH MỤC SẢN PHẨM =================== -->
+    <section class="category">
+      <div class="category-header">
+        <div class="menu-icon">☰</div>
+        <h2>Bộ lọc tất cả sản phẩm</h2>
+      </div>
+
+      <div class="filter-bar">
+        <!-- Nhóm chọn -->
+        <div class="filter-item">
+          <label for="sort">Sắp xếp theo:</label>
+          <select id="sort" name="sort">
+            <option value="macdinh">Mặc định</option>
+            <option value="giam">Giá giảm dần</option>
+            <option value="tang">Giá tăng dần</option>
+            <option value="banchay">Bán chạy nhất</option>
+            <option value="moinhat">Sản phẩm mới nhất</option>
+          </select>
+        </div>
+
+        <div class="filter-item">
+          <label for="trademark">Thương hiệu:</label>
+          <select id="trademark" name="trademark">
+            <option value="tatca">Tất cả</option>
+            <option value="apple">Apple</option>
+            <option value="samsung">Samsung</option>
+            <option value="asus">ASUS</option>
+            <option value="dell">Dell</option>
+            <option value="logitech">Logitech</option>
+            <option value="lenovo">Lenovo</option>
+          </select>
+        </div>
+
+        <div class="filter-item">
+          <label for="type">Loại sản phẩm:</label>
+          <select id="type" name="type">
+            <option value="tatca">Tất cả</option>
+            <option value="camera">Camera</option>
+            <option value="phone">Điện thoại</option>
+            <option value="apple">Apple</option>
+            <option value="laptop">Máy tính</option>
+            <option value="screen">Màn hình</option>
+            <option value="more">Phụ kiện</option>
+          </select>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tất cả -->
+    <section class="recommend">
+      <div class="product-list">
+        <div class="product-item">
+          <img src="Anh/Camera/camera1.png" alt="Camera 1" />
+          <p> Demo sieu sieu dai dai dai daiCamera IP HIKVISION Dome 5MP DS-2CD2155FWD-I</p>
+          <p><span class="price">999.000đ</span></p>
+
+          <div class="product-buttons">
+            <button class="btn buy-now">Mua ngay</button>
+            <button class="btn add-cart" title="Thêm vào giỏ hàng">
+              <i class="fa-solid fa-cart-plus"></i>
+            </button>
+          </div>
+        </div>
+
+        <div class="product-item">
+          <img src="Anh/Camera/camera1.png" alt="Camera 1" />
+          <p>Camera IP HIKVISION Dome 5MP DS-2CD2155FWD-I</p>
+          <p><span class="price">999.000đ</span></p>
+
+          <div class="product-buttons">
+            <button class="btn buy-now">Mua ngay</button>
+            <button class="btn add-cart" title="Thêm vào giỏ hàng">
+              <i class="fa-solid fa-cart-plus"></i>
+            </button>
+          </div>
+        </div>
+
+        <div class="product-item">
+          <img src="Anh/Camera/camera1.png" alt="Camera 1" />
+          <p>Camera IP HIKVISION Dome 5MP DS-2CD2155FWD-I</p>
+          <p><span class="price">999.000đ</span></p>
+
+          <div class="product-buttons">
+            <button class="btn buy-now">Mua ngay</button>
+            <button class="btn add-cart" title="Thêm vào giỏ hàng">
+              <i class="fa-solid fa-cart-plus"></i>
+            </button>
+          </div>
+        </div>
+
+        <div class="product-item">
+          <img src="Anh/Camera/camera1.png" alt="Camera 1" />
+          <p>Camera IP HIKVISION Dome 5MP DS-2CD2155FWD-I</p>
+          <p><span class="price">999.000đ</span></p>
+
+          <div class="product-buttons">
+            <button class="btn buy-now">Mua ngay</button>
+            <button class="btn add-cart" title="Thêm vào giỏ hàng">
+              <i class="fa-solid fa-cart-plus"></i>
+            </button>
+          </div>
+        </div>
+
+        <div class="product-item">
+          <img src="Anh/Camera/camera1.png" alt="Camera 1" />
+          <p>Camera IP HIKVISION Dome 5MP DS-2CD2155FWD-I</p>
+          <p><span class="price">999.000đ</span></p>
+
+          <div class="product-buttons">
+            <button class="btn buy-now">Mua ngay</button>
+            <button class="btn add-cart" title="Thêm vào giỏ hàng">
+              <i class="fa-solid fa-cart-plus"></i>
+            </button>
+          </div>
+        </div>
+
+        <div class="product-item">
+          <img src="Anh/Camera/camera1.png" alt="Camera 1" />
+          <p>Camera IP HIKVISION Dome 5MP DS-2CD2155FWD-I</p>
+          <p><span class="price">999.000đ</span></p>
+
+          <div class="product-buttons">
+            <button class="btn buy-now">Mua ngay</button>
+            <button class="btn add-cart" title="Thêm vào giỏ hàng">
+              <i class="fa-solid fa-cart-plus"></i>
+            </button>
+          </div>
+        </div>
+
+        <div class="product-item">
+          <img src="Anh/Camera/camera1.png" alt="Camera 1" />
+          <p>Camera IP HIKVISION Dome 5MP DS-2CD2155FWD-I</p>
+          <p><span class="price">999.000đ</span></p>
+
+          <div class="product-buttons">
+            <button class="btn buy-now">Mua ngay</button>
+            <button class="btn add-cart" title="Thêm vào giỏ hàng">
+              <i class="fa-solid fa-cart-plus"></i>
+            </button>
+          </div>
+        </div>
+
+        <div class="product-item">
+          <img src="Anh/Camera/camera1.png" alt="Camera 1" />
+          <p>Camera IP HIKVISION Dome 5MP DS-2CD2155FWD-I</p>
+          <p><span class="price">999.000đ</span></p>
+
+          <div class="product-buttons">
+            <button class="btn buy-now">Mua ngay</button>
+            <button class="btn add-cart" title="Thêm vào giỏ hàng">
+              <i class="fa-solid fa-cart-plus"></i>
+            </button>
+          </div>
+        </div>
+
+        <div class="product-item">
+          <img src="Anh/Camera/camera1.png" alt="Camera 1" />
+          <p>Camera IP HIKVISION Dome 5MP DS-2CD2155FWD-I</p>
+          <p><span class="price">999.000đ</span></p>
+
+          <div class="product-buttons">
+            <button class="btn buy-now">Mua ngay</button>
+            <button class="btn add-cart" title="Thêm vào giỏ hàng">
+              <i class="fa-solid fa-cart-plus"></i>
+            </button>
+          </div>
+        </div>
+
+        <div class="product-item">
+          <img src="Anh/Camera/camera1.png" alt="Camera 1" />
+          <p>Camera IP HIKVISION Dome 5MP DS-2CD2155FWD-I</p>
+          <p><span class="price">999.000đ</span></p>
+
+          <div class="product-buttons">
+            <button class="btn buy-now">Mua ngay</button>
+            <button class="btn add-cart" title="Thêm vào giỏ hàng">
+              <i class="fa-solid fa-cart-plus"></i>
+            </button>
+          </div>
+        </div>
+
+        <div class="product-item">
+          <img src="Anh/Camera/camera1.png" alt="Camera 1" />
+          <p>Camera IP HIKVISION Dome 5MP DS-2CD2155FWD-I</p>
+          <p><span class="price">999.000đ</span></p>
+
+          <div class="product-buttons">
+            <button class="btn buy-now">Mua ngay</button>
+            <button class="btn add-cart" title="Thêm vào giỏ hàng">
+              <i class="fa-solid fa-cart-plus"></i>
+            </button>
+          </div>
+        </div>
+
+        <div class="product-item">
+          <img src="Anh/Camera/camera1.png" alt="Camera 1" />
+          <p>Camera IP HIKVISION Dome 5MP DS-2CD2155FWD-I</p>
+          <p><span class="price">999.000đ</span></p>
+
+          <div class="product-buttons">
+            <button class="btn buy-now">Mua ngay</button>
+            <button class="btn add-cart" title="Thêm vào giỏ hàng">
+              <i class="fa-solid fa-cart-plus"></i>
+            </button>
+          </div>
+        </div>
+
+        <div class="readmore-btn ">
+          <span>Xem thêm ></span>
+        </div>
+    </section>
+
+    <!-- =================== BANNER 2=================== -->
+    <section class="banner2">
+      <div class="banner2-box">
+        <img src="Anh/AnhKhac/Banner2.png" alt="QUẢNG CÁO" />
+        <img src="Anh/AnhKhac/Banner3.png" alt="QUẢNG CÁO" />
+      </div>
+    </section>
+
+    <!-- Khuyến mãi -->
+    <section class="recommend">
+      <div class="category-header">
+        <h2>Khuyến mãi online</h2>
+      </div>
+
+      <div class="product-list">
+        <div class="product-item">
+          <img src="Anh/Camera/camera1.png" alt="Camera 1" />
+          <p>Camera IP HIKVISION Dome 5MP DS-2CD2155FWD-I Demo siêu siêu dài dài adif dài </p>
+          <p><span class="price-old">999.000đ</span></p>
+          <p>Giá khuyến mãi: <span class="price-promotion">999.000đ</span></p>
+
+          <div class="product-buttons">
+            <button class="btn buy-now">Mua ngay</button>
+            <button class="btn add-cart" title="Thêm vào giỏ hàng">
+              <i class="fa-solid fa-cart-plus"></i>
+            </button>
+          </div>
+        </div>
+
+        <div class="product-item">
+          <img src="Anh/Camera/camera1.png" alt="Camera 1" />
+          <p>Camera IP HIKVISION Dome 5MP DS-2CD2155FWD-I</p>
+          <p><span class="price-old">999.000đ</span></p>
+          <p>Giá khuyến mãi: <span class="price-promotion">999.000đ</span></p>
+
+          <div class="product-buttons">
+            <button class="btn buy-now">Mua ngay</button>
+            <button class="btn add-cart" title="Thêm vào giỏ hàng">
+              <i class="fa-solid fa-cart-plus"></i>
+            </button>
+          </div>
+        </div>
+
+        <div class="product-item">
+          <img src="Anh/Camera/camera1.png" alt="Camera 1" />
+          <p>Camera IP HIKVISION Dome 5MP DS-2CD2155FWD-I</p>
+          <p><span class="price-old">999.000đ</span></p>
+          <p>Giá khuyến mãi: <span class="price-promotion">999.000đ</span></p>
+
+          <div class="product-buttons">
+            <button class="btn buy-now">Mua ngay</button>
+            <button class="btn add-cart" title="Thêm vào giỏ hàng">
+              <i class="fa-solid fa-cart-plus"></i>
+            </button>
+          </div>
+        </div>
+
+        <div class="product-item">
+          <img src="Anh/Camera/camera1.png" alt="Camera 1" />
+          <p>Camera IP HIKVISION Dome 5MP DS-2CD2155FWD-I</p>
+          <p><span class="price-old">999.000đ</span></p>
+          <p>Giá khuyến mãi: <span class="price-promotion">999.000đ</span></p>
+
+          <div class="product-buttons">
+            <button class="btn buy-now">Mua ngay</button>
+            <button class="btn add-cart" title="Thêm vào giỏ hàng">
+              <i class="fa-solid fa-cart-plus"></i>
+            </button>
+          </div>
+        </div>
+
+        <div class="product-item">
+          <img src="Anh/Camera/camera1.png" alt="Camera 1" />
+          <p>Camera IP HIKVISION Dome 5MP DS-2CD2155FWD-I</p>
+          <p><span class="price-old">999.000đ</span></p>
+          <p>Giá khuyến mãi: <span class="price-promotion">999.000đ</span></p>
+
+          <div class="product-buttons">
+            <button class="btn buy-now">Mua ngay</button>
+            <button class="btn add-cart" title="Thêm vào giỏ hàng">
+              <i class="fa-solid fa-cart-plus"></i>
+            </button>
+          </div>
+        </div>
+
+        <div class="product-item">
+          <img src="Anh/Camera/camera1.png" alt="Camera 1" />
+          <p>Camera IP HIKVISION Dome 5MP DS-2CD2155FWD-I</p>
+          <p><span class="price-old">999.000đ</span></p>
+          <p>Giá khuyến mãi: <span class="price-promotion">999.000đ</span></p>
+
+          <div class="product-buttons">
+            <button class="btn buy-now">Mua ngay</button>
+            <button class="btn add-cart" title="Thêm vào giỏ hàng">
+              <i class="fa-solid fa-cart-plus"></i>
+            </button>
+          </div>
+        </div>
+
+        <div class="readmore-btn ">
+          <span>Xem thêm ></span>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+      <div class="footer-container">
+
+        <!-- Cột 1: Dịch vụ khách hàng -->
+        <div class="footer-column">
+          <h3>DỊCH VỤ KHÁCH HÀNG</h3>
+          <ul>
+            <li><a href="#">Trung Tâm Trợ Giúp IDEALTECH</a></li>
+            <li><a href="#">Hướng Dẫn Mua Hàng/Đặt Hàng</a></li>
+            <li><a href="#">Hướng Dẫn Sử Dụng</a></li>
+            <li><a href="#">Trả Hàng/Hoàn Tiền</a></li>
+            <li><a href="#">Chính Sách Bảo Hành</a></li>
+          </ul>
+        </div>
+
+        <!-- Cột 2: Giới thiệu -->
+        <div class="footer-column">
+          <h3>IDEALTECH THINK DIFFERENT</h3>
+          <ul>
+            <li><a href="#">Về IDEALTECH Think Different</a></li>
+            <li><a href="#">Điều Khoản IDEALTECH</a></li>
+            <li><a href="#">Chính Sách Bảo Mật</a></li>
+            <li><a href="#">Liên Hệ Truyền Thông</a></li>
+            <li><a htef="#">Email: IDEALTECH@gmail.com </a></li>
+            <li><a href="#">Hotline: 0123 456 789</a></li>
+          </ul>
+        </div>
+
+        <!-- Cột 3: Thanh toán và vận chuyển -->
+        <div class="footer-column">
+          <h3>THANH TOÁN</h3>
+          <div class="footer-logos">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/Visa.svg" alt="Visa">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/0/0e/Mastercard-logo.png" alt="MasterCard">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/3/30/American_Express_logo_%282018%29.svg"
+              alt="Amex">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/0/0b/JCB_logo.svg" alt="JCB">
+          </div>
+
+          <h3>ĐƠN VỊ VẬN CHUYỂN</h3>
+          <div class="footer-logos">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/3/35/Viettel_Post_logo.png" alt="Viettel Post">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/b/b9/VNPost_logo.png" alt="VNPost">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a6/J%26T_Express_logo.svg" alt="J&T">
+          </div>
+        </div>
+
+        <!-- Cột 4: Theo dõi IDEALTECH -->
+        <div class="footer-column">
+          <h3>THEO DÕI IDEALTECH</h3>
+          <ul>
+            <li><a href="#"><img src="https://cdn-icons-png.flaticon.com/512/1384/1384005.png" alt="Facebook"
+                  width="18"> Facebook</a></li>
+            <li><a href="#"><img src="https://cdn-icons-png.flaticon.com/512/1384/1384015.png" alt="Instagram"
+                  width="18"> Instagram</a></li>
+            <li><a href="#"><img src="https://cdn-icons-png.flaticon.com/512/1384/1384014.png" alt="LinkedIn"
+                  width="18"> LinkedIn</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </form>
+</body>
+
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head runat="server">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Danh Mục Sản Phẩm</title>
+    <link rel="stylesheet" href="styles/DanhMuc1.css" />
+</head>
+<body>
+    <form id="form1" runat="server">
+
+    <!-- =================== HEADER =================== -->
+    <header>
+        <!-- Logo + Menu -->
+        <div class="header-left">
+            <a href="TrangChu.aspx">
+                <img src="Anh/AnhKhac/logo.jpg" alt="Logo" class="logo-img" />
+            </a>
+
+            <nav class="main-menu">
+                <a href="TrangChu.aspx">Trang chủ|</a>
+                <a href="#" class="active">Danh mục LapTop</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- =================== BANNER =================== -->
+    <section class="banner">
+    <div class="banner-box">
+        <img src="Anh/AnhKhac/Banner%202.png" alt="QUẢNG CÁO" />
+    </div>
+</section>
+
+    <!-- =================== DANH MỤC SẢN PHẨM =================== -->
+   <section class="category">
+  <div class="category-header">
+    <div class="menu-icon">☰</div>
+    <h2>Bộ lọc sản phẩm</h2>
+  </div>
+
+  <div class="filter-bar">
+    <!-- Nhóm chọn -->
+    <div class="filter-item">
+      <label for="sort">Sắp xếp theo:</label>
+      <select id="sort" name="sort">
+        <option value="macdinh">Mặc định</option>
+        <option value="giam">Giá giảm dần</option>
+        <option value="tang">Giá tăng dần</option>
+        <option value="banchay">Bán chạy nhất</option>
+
+      </select>
+    </div>
+
+    <div class="filter-item">
+      <label for="brand">Hãng sản xuất:</label>
+      <select id="brand" name="brand">
+        <option value="tatca">Tất cả</option>
+        <option value="asus">ASUS</option>
+        <option value="hp">HP</option>
+        <option value="dell">DELL</option>
+        <option value="lenovo">Lenovo</option>
+        <option value="apple">Apple</option>
+      </select>
+    </div>
+
+    <div class="filter-item">
+      <label for="size">Kích thước màn hình:</label>
+      <select id="size" name="size">
+        <option value="tatca">Tất cả</option>
+        <option value="13">13 inch</option>
+        <option value="14">14 inch</option>
+        <option value="15">15.6 inch</option>
+        <option value="17">17 inch</option>
+      </select>
+    </div>
+        <div class="filter-item">
+    <label for="chip">Dòng chip:</label>
+    <select id="chip" name="chip">
+      <option value="tatca">Tất cả</option>
+      <option value="i3">core i3</option>
+      <option value="i5">core i5</option>
+      <option value="i7">core i7</option>
+      <option value="i9">core i9</option>
+    </select>
+  </div>
+  </div>
+</section>
+
+<!-- Có thể bạn sẽ thích -->  
+        <section class="recommend">
+            <div class="product-list">
+                <div class="product-item">
+                    <img src="Anh/AnhLaptop/LapTop1/Anh1.png" alt="Laptop Gaming" />
+                    <p>Laptop Gaming</p>
+                    <p>Giá khuyến mãi: <span class="price">999.000đ</span></p>
+
+                </div>
+
+                <div class="product-item">
+                    <img src="Anh/AnhDT/DT1/Anh1.png" " alt="Điện thoại" />
+                    <p>LapTop 2</p>
+                </div>
+
+                <div class="product-item">
+                   <img src="Anh/AnhLaptop/LapTop2/Anh1.png"  alt="Camera" />
+                    <p>LapTop 3</p>
+                </div>
+
+                <div class="product-item">
+                    <img src="Anh/AnhLaptop/LapTop2/Anh2.png" alt="Phụ kiện" />
+                    <p>LapTop 4</p>
+                </div>
+ <div class="product-item">
+    <img src="Anh/AnhLaptop/LapTop2/Anh2.png" alt="Phụ kiện" />
+    <p>LapTop 4</p>
+</div>
+                <div class="product-item">
+    <img src="Anh/AnhLaptop/LapTop2/Anh2.png" alt="Phụ kiện" />
+    <p>LapTop 4</p>
+</div>
+                </div>
+        </section>
+    </section>
+
+    <!-- =================== FOOTER =================== -->
+     <footer>
+    <p><strong>Thông tin liên hệ</strong></p>
+    <p>IDEALTECH Think Different</p>
+    <p>Email: IDEALTECH@gmail.com | Hotline: 0123 456 789</p>
+  </footer>
+
+    </form>
+</body>
+</html>
