@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+
+<html lang="vi">
+
+<head runat="server">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sản Phẩm - </title>
+    <link rel="stylesheet" href="HienThiSanPham.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+</head>
+
+<body>
+    <form id="form1" runat="server">
+
+        <!-- ===== HEADER ===== -->
+        <header>
+            <!-- Logo + Menu -->
+            <div class="header-left">
+                <a href="#">
+                    <img src="Anh/logo.jpg" alt="Logo" class="logo-img" />
+                </a>
+
+                <nav class="main-menu">
+                    <a href="#">Trang chủ|</a>
+                    <a href="#" class="active">Product</a>
+                </nav>
+            </div>
+            <!-- Thanh tìm kiếm -->
+
+            <!-- <div class="search-box">
+                <input type="text" placeholder="Tìm kiếm sản phẩm...">
+                <button type="submit">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div> -->
+
+            <!-- Icon tài khoản và giỏ hàng -->
+            <div class="header-icons">
+                <a href="#" class="account">
+                    <i class="fas fa-user"></i>
+                    <span>Tài khoản</span>
+                </a>
+            </div>
+        </header>
+
+        <!-- LAYOUT chính: SIDEBAR + CONTENT -->
+        <div class="layout">
+            <!-- SIDEBAR -->
+            <aside class="sidebar">
+                <div class="sidebar-nav">
+                    <a href="#" class="side-item active">
+                        <i class="fa-solid fa-table-list"></i>
+                        <span>Sản Phẩm</span>
+                    </a>
+                    <a href="#" class="side-item">
+                        <i class="fa-regular fa-user"></i>
+                        <span>Tài Khoản</span>
+                    </a>
+                </div>
+            </aside>
+
+            <!-- CONTENT -->
+            <main class="content">
+                <div class="content-top">
+                    <div class="page-title">Danh sách sản phẩm</div>
+
+                    <div class="actions">
+                        <button class="btn btn-new"><i class="fa-solid fa-plus"></i> Thêm Sản Phẩm</button>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="table-toolbar">
+                        <input type="text" class="search-input" placeholder="Search">
+                        <div class="export-dropdown">
+                            <button class="btn btn-export">
+                                <i class="fa-solid fa-file-export"></i> Xuất File <i
+                                    class="fa-solid fa-caret-down"></i>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a href="#" id="export-csv"><i class="fa-solid fa-file-csv"></i> Download as
+                                        CSV</a></li>
+                                <li><a href="#" id="print-table"><i class="fa-solid fa-print"></i> Print</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <table class="product-table">
+                        <thead>
+                            <tr>
+                                <th>STT</th>
+                                <th>Ảnh</th>
+                                <th>Tên SP</th>
+                                <th>Giá</th>
+                                <th>Thông tin Sp</th>
+                                <th>Ngày thêm Sp</th>
+                                <th class="w-action">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- sample rows -->
+                            <tr>
+                                <td>1</td>
+                                <td class="prod">
+                                    <img src="https://picsum.photos/48?random=1" alt="pic">
+                                    <img src="https://picsum.photos/48?random=1" alt="pic">
+                                    <img src="https://picsum.photos/48?random=1" alt="pic">
+                                </td>
+                                <td>Accessories</td>
+                                <td>65.29d</td>
+                                <td>abc</td>
+                                <td>19 July, 2025</td>
+                                <td class="actions-cell">
+                                    <a class="act" title="Xem"><i class="fa-regular fa-eye"></i></a>
+                                    <a class="act" title="Sửa"><i class="fa-regular fa-pen-to-square"></i></a>
+                                    <a class="act" title="Xóa"><i class="fa-regular fa-trash-can"></i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td class="prod">
+                                    <img src="https://picsum.photos/48?random=1" alt="pic">
+                                    <img src="https://picsum.photos/48?random=1" alt="pic">
+                                    <img src="https://picsum.photos/48?random=1" alt="pic">
+                                </td>
+                                <td>Accessories</td>
+                                <td>65.29d</td>
+                                <td>abc</td>
+                                <td>19 July, 2025</td>
+                                <td class="actions-cell">
+                                    <a class="act" title="Xem"><i class="fa-regular fa-eye"></i></a>
+                                    <a class="act" title="Sửa"><i class="fa-regular fa-pen-to-square"></i></a>
+                                    <a class="act" title="Xóa"><i class="fa-regular fa-trash-can"></i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td class="prod">
+                                    <img src="https://picsum.photos/48?random=1" alt="pic">
+                                    <img src="https://picsum.photos/48?random=1" alt="pic">
+                                    <img src="https://picsum.photos/48?random=1" alt="pic">
+                                </td>
+                                <td>Accessories</td>
+                                <td>65.29d</td>
+                                <td>abc</td>
+                                <td>19 July, 2025</td>
+                                <td class="actions-cell">
+                                    <a class="act" title="Xem"><i class="fa-regular fa-eye"></i></a>
+                                    <a class="act" title="Sửa"><i class="fa-regular fa-pen-to-square"></i></a>
+                                    <a class="act" title="Xóa"><i class="fa-regular fa-trash-can"></i></a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </main>
+        </div>
+
+        <!-- Footer -->
+        <!-- ===== FOOTER ===== -->
+        <footer class="footer">
+            <div class="footer-container">
+
+                <!-- Cột 1: Dịch vụ khách hàng -->
+                <div class="footer-column">
+                    <h3>DỊCH VỤ KHÁCH HÀNG</h3>
+                    <ul>
+                        <li><a href="#">Trung Tâm Trợ Giúp IDEALTECH</a></li>
+                        <li><a href="#">Hướng Dẫn Mua Hàng/Đặt Hàng</a></li>
+                        <li><a href="#">Hướng Dẫn Sử Dụng</a></li>
+                        <li><a href="#">Trả Hàng/Hoàn Tiền</a></li>
+                        <li><a href="#">Chính Sách Bảo Hành</a></li>
+                    </ul>
+                </div>
+
+                <!-- Cột 2: Giới thiệu -->
+                <div class="footer-column">
+                    <h3>IDEALTECH THINK DIFFERENT</h3>
+                    <ul>
+                        <li><a href="#">Về IDEALTECH Think Different</a></li>
+                        <li><a href="#">Điều Khoản IDEALTECH</a></li>
+                        <li><a href="#">Chính Sách Bảo Mật</a></li>
+                        <li><a href="#">Liên Hệ Truyền Thông</a></li>
+                        <li><a htef="#">Email: IDEALTECH@gmail.com </a></li>
+                        <li><a href="#">Hotline: 0123 456 789</a></li>
+                    </ul>
+                </div>
+
+                <!-- Cột 3: Thanh toán và vận chuyển -->
+                <div class="footer-column">
+                    <h3>THANH TOÁN</h3>
+                    <div class="footer-logos">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/Visa.svg" alt="Visa">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/0/0e/Mastercard-logo.png"
+                            alt="MasterCard">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/3/30/American_Express_logo_%282018%29.svg"
+                            alt="Amex">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/0/0b/JCB_logo.svg" alt="JCB">
+                    </div>
+
+                    <h3>ĐƠN VỊ VẬN CHUYỂN</h3>
+                    <div class="footer-logos">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/3/35/Viettel_Post_logo.png"
+                            alt="Viettel Post">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/b/b9/VNPost_logo.png" alt="VNPost">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a6/J%26T_Express_logo.svg" alt="J&T">
+                    </div>
+                </div>
+
+                <!-- Cột 4: Theo dõi IDEALTECH -->
+                <div class="footer-column">
+                    <h3>THEO DÕI IDEALTECH</h3>
+                    <ul>
+                        <li><a href="#"><img src="https://cdn-icons-png.flaticon.com/512/1384/1384005.png"
+                                    alt="Facebook" width="18"> Facebook</a></li>
+                        <li><a href="#"><img src="https://cdn-icons-png.flaticon.com/512/1384/1384015.png"
+                                    alt="Instagram" width="18"> Instagram</a></li>
+                        <li><a href="#"><img src="https://cdn-icons-png.flaticon.com/512/1384/1384014.png"
+                                    alt="LinkedIn" width="18"> LinkedIn</a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+    </form>
+</body>
+<script src="pagination.js"></script>
+<script src="export.js"></script>
+</html>
