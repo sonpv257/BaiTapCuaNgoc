@@ -5,7 +5,7 @@
 <head runat="server">
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sản Phẩm - </title>
+    <title>Sản Phẩm - Quản Trị Viên</title>
     <link rel="stylesheet" href="HienThiSanPham.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
 </head>
@@ -23,7 +23,7 @@
 
                 <nav class="main-menu">
                     <a href="#">Trang chủ|</a>
-                    <a href="#" class="active">Product</a>
+                    <a href="#" class="active">Sản Phẩm</a>
                 </nav>
             </div>
             <!-- Thanh tìm kiếm -->
@@ -71,8 +71,37 @@
                 </div>
 
                 <div class="card">
+
+                    <!-- THỐNG KÊ SẢN PHẨM -->
+                    <div class="stats-container">
+                        <div class="stat-box total">
+                            <i class="fa-solid fa-boxes-stacked"></i>
+                            <div class="stat-text">
+                                <p>Tổng hàng</p>
+                                <span>12</span>
+                            </div>
+                        </div>
+
+                        <div class="stat-box in-stock">
+                            <i class="fa-solid fa-circle-check"></i>
+                            <div class="stat-text">
+                                <p>Còn hàng</p>
+                                <span>8</span>
+                            </div>
+                        </div>
+
+                        <div class="stat-box out-stock">
+                            <i class="fa-solid fa-circle-xmark"></i>
+                            <div class="stat-text">
+                                <p>Hết hàng</p>
+                                <span>4</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tìm kiếm -->
                     <div class="table-toolbar">
-                        <input type="text" class="search-input" placeholder="Search">
+                        <input type="text" class="search-input" placeholder="Tìm kiếm ...">
                         <div class="export-dropdown">
                             <button type="button" class="btn btn-export">
                                 <i class="fa-solid fa-file-export"></i> Xuất File <i class="fa-solid fa-caret-down"></i>
@@ -94,11 +123,12 @@
                                 <th>Giá</th>
                                 <th>Thông tin Sp</th>
                                 <th>Ngày thêm Sp</th>
-                                <th class="w-action">Action</th>
+                                <th>Trạng thái</th>
+                                <th class="w-action">Thao tác</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <!-- sample rows -->
+                            <!-- hàng sp-->
                             <tr>
                                 <td>1</td>
                                 <td class="prod">
@@ -110,6 +140,7 @@
                                 <td>65.29d</td>
                                 <td>abc</td>
                                 <td>19 July, 2025</td>
+                                <td><span class="status active">Còn hàng</span></td>
                                 <td class="actions-cell">
                                     <a class="act" title="Xem"><i class="fa-regular fa-eye"></i></a>
                                     <a class="act" title="Sửa"><i class="fa-regular fa-pen-to-square"></i></a>
@@ -127,6 +158,7 @@
                                 <td>65.29d</td>
                                 <td>abc</td>
                                 <td>19 July, 2025</td>
+                                <td><span class="status inactive">Hết hàng</span></td>
                                 <td class="actions-cell">
                                     <a class="act" title="Xem"><i class="fa-regular fa-eye"></i></a>
                                     <a class="act" title="Sửa"><i class="fa-regular fa-pen-to-square"></i></a>
@@ -144,6 +176,7 @@
                                 <td>65.29d</td>
                                 <td>abc</td>
                                 <td>19 July, 2025</td>
+                                <td><span class="status inactive">Hết hàng</span></td>
                                 <td class="actions-cell">
                                     <a class="act" title="Xem"><i class="fa-regular fa-eye"></i></a>
                                     <a class="act" title="Sửa"><i class="fa-regular fa-pen-to-square"></i></a>

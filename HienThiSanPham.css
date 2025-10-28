@@ -123,7 +123,69 @@ header {
 }
 
 
+/* ====== THỐNG KÊ ====== */
+.stats-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: #fff;
+    padding: 20px 15px;
+    border-radius: 10px;
+    gap: 20px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+}
 
+.stat-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex: 1;
+    border-radius: 12px;
+    padding: 15px 10px;
+    color: #6b4a4a;
+    background: #fafafa;
+    border: 1px solid #f0f0f0;
+    transition: all 0.3s ease;
+}
+
+.stat-box:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+    background: #fff;
+}
+
+.stat-box i {
+    font-size: 26px;
+    color: #a3392d;
+    margin-bottom: 8px;
+}
+
+.stat-text p {
+    margin: 0;
+    font-size: 15px;
+    font-weight: 600;
+    color: #444;
+}
+
+.stat-text span {
+    font-size: 20px;
+    font-weight: bold;
+    color: #a3392d;
+}
+
+/* Màu riêng cho từng ô */
+.stat-box.total i,
+.stat-box.total span { color: #8b0000; }
+
+.stat-box.in-stock i,
+.stat-box.in-stock span { color: #147b3d; }
+
+.stat-box.out-stock i,
+.stat-box.out-stock span { color: #d92b2b; }
 
 
 /* ===== 🔍 THANH TÌM KIẾM ===== */
@@ -494,6 +556,17 @@ header {
     font-size: 0.85rem;
     color    : #6b7280;
 }
+
+/* status pills */
+.status {
+  display:inline-block;
+  padding:6px 10px;
+  border-radius:999px;
+  font-weight:700;
+  font-size:0.8rem;
+}
+.status.active { background:#e6fbef; color:#127a4a; }
+.status.inactive { background:#fff0f0; color:#b94a3a; }
 
 /* action icons */
 .actions-cell {
