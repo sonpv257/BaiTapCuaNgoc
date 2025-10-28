@@ -293,6 +293,17 @@ header {
     font-weight: 700;
 }
 
+/* ===== PHÂN CỘT DỌC SIDEBAR ===== */
+.sidebar-divider {
+    width: 2px;
+    background: linear-gradient(to bottom, #e5e7eb, #f3f4f6);
+    border-radius: 1px;
+    height: auto;
+    min-height: calc(100vh - 180px); /* cao gần bằng layout */
+    align-self: stretch;
+    box-shadow: inset 0 0 3px rgba(0,0,0,0.05);
+}
+
 /* CONTENT */
 .content {
     flex      : 1;
