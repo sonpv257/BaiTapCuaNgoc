@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+
+<html lang="vi">
+
+<head runat="server">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thêm Sản Phẩm - Quản Trị Viên</title>
+    <link rel="stylesheet" href="ThemSanPham.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+</head>
+
+<body>
+    <form id="form1" runat="server">
+
+        <!-- ===== HEADER ===== -->
+        <header>
+            <!-- Logo + Menu -->
+            <div class="header-left">
+                <a href="#">
+                    <img src="Anh/logo.jpg" alt="Logo" class="logo-img" />
+                </a>
+
+                <nav class="main-menu">
+                    <a href="#">Trang chủ|</a>
+                    <a href="#" class="active">Thêm Sản Phẩm</a>
+                </nav>
+            </div>
+
+            <!-- Icon tài khoản -->
+            <div class="header-icons">
+                <div class="account-dropdown">
+                    <input type="checkbox" id="toggleAccount" hidden>
+                    <label for="toggleAccount" class="account">
+                        <i class="fas fa-user"></i>
+                        <span>Admin</span>
+                        <i class="fa-solid fa-caret-down"></i>
+                    </label>
+
+                    <div class="dropdown-menu">
+                        <a href="#" class="logout-option">
+                            <i class="fa-solid fa-right-from-bracket"></i> Đăng xuất
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </header>
+
+        <!-- LAYOUT chính: SIDEBAR + CONTENT -->
+        <div class="layout">
+            <!-- SIDEBAR -->
+            <aside class="sidebar">
+                <div class="sidebar-nav">
+                    <a href="#" class="side-item active">
+                        <i class="fa-solid fa-table-list"></i>
+                        <span>Sản Phẩm</span>
+                    </a>
+                    <a href="#" class="side-item">
+                        <i class="fa-regular fa-user"></i>
+                        <span>Tài Khoản</span>
+                    </a>
+                </div>
+            </aside>
+            <div class="sidebar-divider"></div>
+            <!-- CONTENT -->
+            <main class="content">
+                <div class="add-product-container">
+                    <form id="addProductForm">
+                        <!-- 🔹 Hàng ngang: Tên + Giá -->
+                        <div class="form-row">
+                            <div class="form-group half">
+                                <label for="tenSP">Tên sản phẩm</label>
+                                <input type="text" id="tenSP" required placeholder="Nhập tên sản phẩm..." />
+                            </div>
+
+                            <div class="form-group half">
+                                <label for="giaSP">Giá sản phẩm (VNĐ)</label>
+                                <input type="number" id="giaSP" min="0" required placeholder="Nhập giá..." />
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="moTaSP">Mô tả sản phẩm</label>
+                            <textarea id="moTaSP" placeholder="Nhập thông tin mô tả..."></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="anhSP">Ảnh sản phẩm</label>
+                            <input type="file" id="anhSP" accept="image/*" multiple />
+
+                            <!-- Khung preview -->
+                            <div id="preview-container" class="preview-list"></div>
+
+                        </div>
+
+
+                        <div class="form-group">
+                            <label for="trangThai">Trạng thái</label>
+                            <select id="trangThai">
+                                <option value="Còn hàng">Còn hàng</option>
+                                <option value="Hết hàng">Hết hàng</option>
+                            </select>
+                        </div>
+
+                        <div class="form-actions">
+                            <button type="button" class="btn-back" onclick="window.location.href='HienThiSanPham.html'">
+                                <i class="fa-solid fa-arrow-left"></i> Quay lại
+                            </button>
+                            <button type="submit" class="btn-submit">
+                                <i class="fa-solid fa-save"></i> Lưu sản phẩm
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+            </main>
+        </div>
+
+        <!-- Footer -->
+        <!-- ===== FOOTER ===== -->
+        <footer class="footer">
+            <div class="footer-container">
+
+                <!-- Cột 1: Dịch vụ khách hàng -->
+                <div class="footer-column">
+                    <h3>DỊCH VỤ KHÁCH HÀNG</h3>
+                    <ul>
+                        <li><a href="#">Trung Tâm Trợ Giúp IDEALTECH</a></li>
+                        <li><a href="#">Hướng Dẫn Mua Hàng/Đặt Hàng</a></li>
+                        <li><a href="#">Hướng Dẫn Sử Dụng</a></li>
+                        <li><a href="#">Trả Hàng/Hoàn Tiền</a></li>
+                        <li><a href="#">Chính Sách Bảo Hành</a></li>
+                    </ul>
+                </div>
+
+                <!-- Cột 2: Giới thiệu -->
+                <div class="footer-column">
+                    <h3>IDEALTECH THINK DIFFERENT</h3>
+                    <ul>
+                        <li><a href="#">Về IDEALTECH Think Different</a></li>
+                        <li><a href="#">Điều Khoản IDEALTECH</a></li>
+                        <li><a href="#">Chính Sách Bảo Mật</a></li>
+                        <li><a href="#">Liên Hệ Truyền Thông</a></li>
+                        <li><a htef="#">Email: IDEALTECH@gmail.com </a></li>
+                        <li><a href="#">Hotline: 0123 456 789</a></li>
+                    </ul>
+                </div>
+
+                <!-- Cột 3: Thanh toán và vận chuyển -->
+                <div class="footer-column">
+                    <h3>THANH TOÁN</h3>
+                    <div class="footer-logos">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/Visa.svg" alt="Visa">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/0/0e/Mastercard-logo.png"
+                            alt="MasterCard">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/3/30/American_Express_logo_%282018%29.svg"
+                            alt="Amex">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/0/0b/JCB_logo.svg" alt="JCB">
+                    </div>
+
+                    <h3>ĐƠN VỊ VẬN CHUYỂN</h3>
+                    <div class="footer-logos">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/3/35/Viettel_Post_logo.png"
+                            alt="Viettel Post">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/b/b9/VNPost_logo.png" alt="VNPost">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a6/J%26T_Express_logo.svg" alt="J&T">
+                    </div>
+                </div>
+
+                <!-- Cột 4: Theo dõi IDEALTECH -->
+                <div class="footer-column">
+                    <h3>THEO DÕI IDEALTECH</h3>
+                    <ul>
+                        <li><a href="#"><img src="https://cdn-icons-png.flaticon.com/512/1384/1384005.png"
+                                    alt="Facebook" width="18"> Facebook</a></li>
+                        <li><a href="#"><img src="https://cdn-icons-png.flaticon.com/512/1384/1384015.png"
+                                    alt="Instagram" width="18"> Instagram</a></li>
+                        <li><a href="#"><img src="https://cdn-icons-png.flaticon.com/512/1384/1384014.png"
+                                    alt="LinkedIn" width="18"> LinkedIn</a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+    </form>
+</body>
+<script src="Script/anh.js"></script>
+
+</html>

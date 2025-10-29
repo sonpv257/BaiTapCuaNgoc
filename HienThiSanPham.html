@@ -26,22 +26,25 @@
                     <a href="#" class="active">Sản Phẩm</a>
                 </nav>
             </div>
-            <!-- Thanh tìm kiếm -->
 
-            <!-- <div class="search-box">
-                <input type="text" placeholder="Tìm kiếm sản phẩm...">
-                <button type="submit">
-                    <i class="fas fa-search"></i>
-                </button>
-            </div> -->
-
-            <!-- Icon tài khoản và giỏ hàng -->
+            <!-- Icon tài khoản  -->
             <div class="header-icons">
-                <a href="#" class="account">
-                    <i class="fas fa-user"></i>
-                    <span>Tài khoản</span>
-                </a>
+                <div class="account-dropdown">
+                    <input type="checkbox" id="toggleAccount" hidden>
+                    <label for="toggleAccount" class="account">
+                        <i class="fas fa-user"></i>
+                        <span>Admin</span>
+                        <i class="fa-solid fa-caret-down"></i>
+                    </label>
+
+                    <div class="dropdown-menu">
+                        <a href="#" class="logout-option">
+                            <i class="fa-solid fa-right-from-bracket"></i> Đăng xuất
+                        </a>
+                    </div>
+                </div>
             </div>
+
         </header>
 
         <!-- LAYOUT chính: SIDEBAR + CONTENT -->
@@ -64,10 +67,6 @@
             <main class="content">
                 <div class="content-top">
                     <div class="page-title">Danh sách sản phẩm</div>
-
-                    <div class="actions">
-                        <button class="btn btn-new"><i class="fa-solid fa-plus"></i> Thêm Sản Phẩm</button>
-                    </div>
                 </div>
 
                 <div class="card">
@@ -78,7 +77,7 @@
                             <i class="fa-solid fa-boxes-stacked"></i>
                             <div class="stat-text">
                                 <p>Tổng hàng</p>
-                                <span>12</span>
+                                <span>0</span>
                             </div>
                         </div>
 
@@ -86,7 +85,7 @@
                             <i class="fa-solid fa-circle-check"></i>
                             <div class="stat-text">
                                 <p>Còn hàng</p>
-                                <span>8</span>
+                                <span>0</span>
                             </div>
                         </div>
 
@@ -94,24 +93,16 @@
                             <i class="fa-solid fa-circle-xmark"></i>
                             <div class="stat-text">
                                 <p>Hết hàng</p>
-                                <span>4</span>
+                                <span>0</span>
                             </div>
                         </div>
                     </div>
 
+
                     <!-- Tìm kiếm -->
                     <div class="table-toolbar">
                         <input type="text" class="search-input" placeholder="Tìm kiếm ...">
-                        <div class="export-dropdown">
-                            <button type="button" class="btn btn-export">
-                                <i class="fa-solid fa-file-export"></i> Xuất File <i class="fa-solid fa-caret-down"></i>
-                            </button>
-                            <ul class="dropdown-menu">
-                                <li><a href="#" id="export-csv"><i class="fa-solid fa-file-csv"></i> Download as
-                                        CSV</a></li>
-                                <li><a href="#" id="print-table"><i class="fa-solid fa-print"></i> Print</a></li>
-                            </ul>
-                        </div>
+                        <button class="btn btn-new"><i class="fa-solid fa-plus"></i> Thêm Sản Phẩm</button>
                     </div>
 
                     <table class="product-table">
@@ -136,7 +127,7 @@
                                     <img src="https://picsum.photos/48?random=1" alt="pic">
                                     <img src="https://picsum.photos/48?random=1" alt="pic">
                                 </td>
-                                <td>Accessories</td>
+                                <td>Điện thoại</td>
                                 <td>65.29d</td>
                                 <td>abc</td>
                                 <td>19 July, 2025</td>
@@ -154,7 +145,7 @@
                                     <img src="https://picsum.photos/48?random=1" alt="pic">
                                     <img src="https://picsum.photos/48?random=1" alt="pic">
                                 </td>
-                                <td>Accessories</td>
+                                <td>Phụ kiện</td>
                                 <td>65.29d</td>
                                 <td>abc</td>
                                 <td>19 July, 2025</td>
@@ -172,7 +163,7 @@
                                     <img src="https://picsum.photos/48?random=1" alt="pic">
                                     <img src="https://picsum.photos/48?random=1" alt="pic">
                                 </td>
-                                <td>Accessories</td>
+                                <td>Máy tính</td>
                                 <td>65.29d</td>
                                 <td>abc</td>
                                 <td>19 July, 2025</td>
@@ -256,7 +247,8 @@
         </footer>
     </form>
 </body>
-<script src="pagination.js"></script>
-<script src="export.js"></script>
+<script src="Script/phantrang.js"></script>
+<script src="Script/tong.js"></script>
+<script src="Script/timkiem.js"></script>
 
 </html>

@@ -1,0 +1,631 @@
+/* Reset mặc định */
+* {
+    margin    : 0;
+    padding   : 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* 🎨 Màu chủ đạo */
+    --blue       : #0077B5;
+    --yellow     : #FFCC00;
+    --white      : #ffffff;
+    --gray       : #f5f5f5;
+    --red        : #e63946;
+    --reddeep    : #ff7b7b;
+    --black      : #000000;
+    --dark       : #333333;
+    --border     : #dddddd;
+    --border-soft: #f0f0f0;
+    --text-muted : #444444;
+    --light-gray : #fafafa;
+    --green      : #147b3d;
+    --greenlight : #dff8e8;
+    --shadow     : rgba(0, 0, 0, 0.08);
+}
+
+/* ===== BODY ===== */
+body {
+    font-family     : "Segoe UI", Arial, sans-serif;
+    background-color: var(--white);
+    color           : var(--dark);
+}
+
+/* ===== HEADER ===== */
+header {
+    background-color: var(--blue);
+    display         : flex;
+    align-items     : center;
+    padding         : 10px 60px;
+    height          : 50px;
+    justify-content : space-between;
+}
+
+.header-left {
+    display    : flex;
+    align-items: center;
+    gap        : 40px;
+}
+
+.logo-img {
+    height: 40px;
+    width : auto;
+    cursor: pointer;
+}
+
+/* ===== MENU ===== */
+.main-menu {
+    display    : flex;
+    align-items: center;
+}
+
+.main-menu a {
+    color          : var(--white);
+    text-decoration: none;
+    font-weight    : 600;
+    margin-right   : 25px;
+    font-size      : 1.1em;
+    transition     : all 0.3s ease;
+    cursor         : pointer;
+}
+
+.main-menu a:hover,
+.main-menu.active {
+    color         : var(--yellow);
+    transform     : scale(1.02);
+    letter-spacing: 0.5px;
+    box-shadow    : 0 2px 4px rgba(255, 204, 0, 0.3);
+}
+
+.main-menu .active::after {
+    content      : '';
+    background   : var(--yellow);
+    border-radius: 1px;
+}
+
+/* ===== BREADCRUMB ===== */
+.breadcrumb {
+    margin     : 10px 0 10px 100px;
+    font-size  : 1.1em;
+    color      : var(--blue);
+    font-weight: 500;
+    display    : flex;
+    align-items: center;
+    gap        : 8px;
+}
+
+.breadcrumb a {
+    text-decoration: none;
+    color          : var(--blue);
+    font-weight    : 600;
+    transition     : all 0.2s ease;
+    position       : relative;
+    cursor         : pointer;
+}
+
+.breadcrumb a:hover {
+    color                : var(--yellow);
+    transform            : scale(1.02);
+    text-decoration      : none;
+    text-underline-offset: 2px;
+    box-shadow           : 0 1px 3px rgba(255, 204, 0, 0.2);
+}
+
+.breadcrumb span {
+    color: var(--dark);
+}
+
+/* ===== THỐNG KÊ ===== */
+.stats-container {
+    display        : flex;
+    justify-content: space-around;
+    align-items    : center;
+    background     : var(--white);
+    padding        : 20px 15px;
+    border-radius  : 10px;
+    gap            : 20px;
+    box-shadow     : 0 3px 10px var(--shadow);
+    margin-bottom  : 20px;
+    transition     : all 0.3s ease;
+}
+
+.stat-box {
+    display        : flex;
+    flex-direction : column;
+    align-items    : center;
+    justify-content: center;
+    text-align     : center;
+    flex           : 1;
+    border-radius  : 12px;
+    padding        : 15px 10px;
+    color          : var(--text-muted);
+    background     : var(--light-gray);
+    border         : 1px solid var(--border-soft);
+    transition     : all 0.3s ease;
+}
+
+.stat-box:hover {
+    transform : translateY(-3px);
+    box-shadow: 0 6px 12px var(--shadow);
+    background: var(--white);
+}
+
+.stat-box i {
+    font-size    : 26px;
+    color        : var(--reddeep);
+    margin-bottom: 8px;
+}
+
+.stat-text p {
+    margin     : 0;
+    font-size  : 15px;
+    font-weight: 600;
+    color      : var(--text-muted);
+}
+
+.stat-text span {
+    font-size  : 20px;
+    font-weight: bold;
+    color      : var(--reddeep);
+}
+
+/* Màu riêng */
+.stat-box.total i,
+.stat-box.total span {
+    color: var(--red);
+}
+
+.stat-box.in-stock i,
+.stat-box.in-stock span {
+    color: var(--green);
+}
+
+.stat-box.out-stock i,
+.stat-box.out-stock span {
+    color: var(--red);
+}
+
+/* ===== ICON ACCOUNT ===== */
+.header-icons {
+    display    : flex;
+    align-items: center;
+    gap        : 20px;
+}
+
+.header-icons a {
+    text-decoration: none;
+    color          : var(--white);
+    display        : flex;
+    align-items    : center;
+    gap            : 6px;
+    font-weight    : 600;
+    transition     : color 0.3s ease, transform 0.2s ease;
+}
+
+.header-icons a:hover {
+    color    : var(--yellow);
+    transform: scale(1.05);
+}
+
+.header-icons i {
+    font-size: 1.3em;
+}
+
+/* ===== ĐĂNG XUẤT ===== */
+.account-dropdown {
+    position: relative;
+    display : inline-block;
+}
+
+.account {
+    display        : flex;
+    align-items    : center;
+    gap            : 6px;
+    color          : var(--white);
+    text-decoration: none;
+    font-weight    : 600;
+    cursor         : pointer;
+    transition     : color 0.3s ease;
+}
+
+.account:hover {
+    color: var(--yellow);
+}
+
+.account i.fa-caret-down {
+    font-size: 0.8em;
+}
+
+.account-dropdown .dropdown-menu {
+    position      : absolute;
+    top           : 140%;
+    background    : var(--white);
+    border-radius : 8px;
+    box-shadow    : 0 4px 10px rgba(0, 0, 0, 0.15);
+    min-width     : 130px;
+    z-index       : 100;
+    overflow      : hidden;
+    opacity       : 0;
+    transform     : translateY(-5px);
+    pointer-events: none;
+    transition    : all 0.25s ease;
+}
+
+.account-dropdown input:checked ~ .dropdown-menu {
+    opacity       : 1;
+    transform     : translateY(0);
+    pointer-events: auto;
+}
+
+.dropdown-menu a {
+    display  : block;
+    font-size: 15px;
+    padding  : 10px 0 10px 19px;
+    color          : var(--dark);
+    text-decoration: none;
+}
+
+.dropdown-menu a:hover {
+    background: var(--gray);
+}
+
+.logout-option i {
+    color       : var(--red);
+    margin-right: 8px;
+}
+
+/* ===== LAYOUT ===== */
+.layout {
+    display: flex;
+    margin : 30px auto 30px;
+    gap    : 20px;
+    width  : 100%;
+    padding: 0 20px;
+}
+
+/* ===== SIDEBAR ===== */
+.sidebar {
+    width        : 220px;
+    background   : var(--white);
+    border-radius: 8px;
+    padding      : 14px;
+    box-shadow   : 0 2px 6px var(--shadow);
+    height       : calc(100vh - 160px);
+    position     : sticky;
+    top          : 84px;
+}
+
+.sidebar-nav {
+    display       : flex;
+    flex-direction: column;
+    gap           : 8px;
+}
+
+.side-item {
+    display        : flex;
+    align-items    : center;
+    gap            : 10px;
+    padding        : 10px;
+    border-radius  : 8px;
+    color          : var(--dark);
+    text-decoration: none;
+    font-weight    : 600;
+    transition     : all .18s ease;
+}
+
+.side-item i {
+    font-size : 1.05rem;
+    width     : 20px;
+    text-align: center;
+}
+
+.side-item:hover {
+    background: var(--gray);
+    color     : var(--green);
+}
+
+.side-item.active {
+    background: var(--greenlight);
+    color     : var(--green);
+    box-shadow: inset 0 1px 0 rgba(0, 0, 0, 0.02);
+}
+
+.sidebar-sep {
+    margin     : 12px 6px 6px;
+    color      : var(--dark);
+    font-size  : .8rem;
+    font-weight: 700;
+}
+
+.sidebar-divider {
+    width        : 2px;
+    background   : linear-gradient(to bottom, var(--gray), #f3f4f6);
+    border-radius: 1px;
+    height       : auto;
+    min-height   : calc(100vh - 180px);
+    align-self   : stretch;
+    box-shadow   : inset 0 0 3px rgba(0, 0, 0, 0.05);
+}
+
+/* ===== CONTENT ===== */
+.content {
+    flex      : 1;
+    min-height: 300px;
+}
+
+/* ===== FORM THÊM SẢN PHẨM ===== */
+.add-product-container {
+    background   : var(--white);
+    padding      : 30px;
+    margin       : 40px auto;
+    border-radius: 12px;
+    box-shadow   : 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.add-product-container h2 {
+    text-align   : center;
+    color        : var(--dark);
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    display      : block;
+    font-weight  : 600;
+    margin-bottom: 6px;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width        : 100%;
+    padding      : 10px 12px;
+    border       : 1px solid var(--border);
+    border-radius: 8px;
+    font-size    : 15px;
+}
+
+.form-group textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+.form-group input[type="file"] {
+    padding: 5px;
+}
+
+.form-actions {
+    text-align: center;
+    margin-top: 25px;
+}
+
+.btn-submit {
+    background   : var(--blue);
+    color        : var(--white);
+    border       : none;
+    padding      : 10px 22px;
+    border-radius: 6px;
+    cursor       : pointer;
+    font-weight  : 600;
+}
+
+.btn-submit:hover {
+    background: #005fa3;
+}
+
+/* ===== FORM 2 CỘT ===== */
+.form-row {
+    display: flex;
+    gap    : 20px;
+}
+
+.form-group.half {
+    flex: 1;
+}
+
+/* ===== XEM TRƯỚC ẢNH ===== */
+#preview-container {
+    display   : flex;
+    flex-wrap : wrap;
+    gap       : 10px;
+    margin-top: 10px;
+}
+
+#preview-container img {
+    width        : 200px;
+    height       : 200px;
+    object-fit   : cover;
+    border-radius: 8px;
+    border       : 1px solid var(--border);
+    box-shadow   : 0 2px 6px var(--shadow);
+    transition   : transform 0.2s ease;
+    cursor       : pointer;
+}
+
+#preview-container img:hover {
+    transform: scale(1.05);
+}
+
+/* Popup xem ảnh lớn */
+.preview-popup {
+    position       : fixed;
+    inset          : 0;
+    background     : rgba(0, 0, 0, 0.7);
+    display        : flex;
+    justify-content: center;
+    align-items    : center;
+    z-index        : 9999;
+}
+
+.preview-popup img {
+    max-width    : 90%;
+    max-height   : 90%;
+    border-radius: 10px;
+    box-shadow   : 0 0 20px rgba(255, 255, 255, 0.4);
+    cursor       : zoom-out;
+}
+
+/* Buttons */
+.btn-back {
+    background   : #6c757d;
+    color        : var(--white);
+    border       : none;
+    padding      : 10px 18px;
+    border-radius: 6px;
+    cursor       : pointer;
+    margin-right : 10px;
+}
+
+.btn-back:hover {
+    background: #555;
+}
+
+/* ===== PREVIEW ẢNH DẠNG FORM NHỎ ===== */
+.preview-list {
+    display   : flex;
+    flex-wrap : wrap;
+    gap       : 15px;
+    margin-top: 15px;
+}
+
+.preview-item {
+    position     : relative;
+    width        : 140px;
+    background   : var(--white);
+    border       : 1px solid var(--border);
+    border-radius: 10px;
+    box-shadow   : 0 3px 6px var(--shadow);
+    overflow     : hidden;
+    transition   : all 0.25s ease;
+}
+
+.preview-item:hover {
+    transform : translateY(-3px);
+    box-shadow: 0 5px 10px var(--shadow);
+}
+
+.preview-item img {
+    width     : 100%;
+    height    : 100px;
+    object-fit: cover;
+    display   : block;
+}
+
+.preview-info {
+    padding   : 6px 8px;
+    font-size : 13px;
+    text-align: center;
+    color     : var(--text-muted);
+    background: var(--gray);
+}
+
+.preview-actions {
+    position: absolute;
+    top     : 6px;
+    right   : 6px;
+    display : flex;
+    gap     : 5px;
+}
+
+.preview-actions button {
+    background     : rgba(255, 255, 255, 0.85);
+    border         : none;
+    border-radius  : 50%;
+    width          : 26px;
+    height         : 26px;
+    display        : flex;
+    align-items    : center;
+    justify-content: center;
+    cursor         : pointer;
+    transition     : all 0.2s ease;
+}
+
+.preview-actions button:hover {
+    background: var(--white);
+    transform : scale(1.1);
+}
+
+.preview-actions i {
+    color    : var(--dark);
+    font-size: 14px;
+}
+
+/* =======================
+   FOOTER
+======================= */
+footer.footer {
+    background-color: var(--white);
+    color           : var(--text-dark);
+    padding         : 50px 5%;
+    border-top      : 1px solid var(--gray);
+    margin-top      : auto;
+}
+
+.footer-container {
+    display        : flex;
+    justify-content: center;
+    align-items    : flex-start;
+    flex-wrap      : wrap;
+    gap            : 40px;
+    max-width      : 1200px;
+    margin         : 0 auto;
+    text-align     : left;
+}
+
+.footer-column {
+    flex     : 1;
+    min-width: 220px;
+}
+
+.footer-column h3 {
+    font-size     : 1rem;
+    font-weight   : bold;
+    margin-bottom : 15px;
+    color         : var(--text-dark);
+    text-transform: uppercase;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding   : 0;
+    margin    : 0;
+}
+
+.footer-column li {
+    margin-bottom: 8px;
+}
+
+.footer-column a {
+    text-decoration: none;
+    color          : var(--text-dark);
+    font-size      : 0.95rem;
+    transition     : color 0.2s ease;
+}
+
+.footer-column a:hover {
+    color: var(--green);
+}
+
+.footer-logos {
+    display        : flex;
+    justify-content: center;
+    flex-wrap      : wrap;
+    gap            : 10px;
+    margin-bottom  : 15px;
+}
+
+.footer-logos img {
+    height          : 35px;
+    border          : 1px solid var(--gray);
+    border-radius   : 4px;
+    padding         : 4px;
+    background-color: var(--white);
+    transition      : transform 0.2s ease;
+}
+
+.footer-logos img:hover {
+    transform: scale(1.07);
+}
