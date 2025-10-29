@@ -3,7 +3,7 @@
 
 document.addEventListener("DOMContentLoaded", function () {
     const searchInput = document.querySelector(".search-input");
-    const rows = document.querySelectorAll(".product-table tbody tr");
+    const rows = document.querySelectorAll(".list-table tbody tr");
 
     searchInput.addEventListener("input", function () {
         const keyword = this.value.toLowerCase().trim();
@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // document.addEventListener("DOMContentLoaded", function () {
 //     const searchInput = document.querySelector(".search-input");
-//     const rows = document.querySelectorAll(".product-table tbody tr");
+//     const rows = document.querySelectorAll(".list-table tbody tr");
 
 //     searchInput.addEventListener("input", function () {
 //         const keyword = this.value.toLowerCase().trim();

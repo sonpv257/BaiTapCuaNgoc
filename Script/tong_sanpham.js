@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
   function updateProductStats() {
-    const rows = document.querySelectorAll(".product-table tbody tr");
+    const rows = document.querySelectorAll(".list-table tbody tr");
     let total = 0;
     let inStock = 0;
     let outStock = 0;
@@ -32,13 +32,3 @@ document.addEventListener("DOMContentLoaded", () => {
   window.updateProductStats = updateProductStats;
 });
 
-document.querySelectorAll(".act[title='Xóa']").forEach(btn => {
-  btn.addEventListener("click", (e) => {
-    e.preventDefault();
-    const row = btn.closest("tr");
-    if (confirm("Bạn có chắc muốn xóa sản phẩm này?")) {
-      row.remove();
-      updateProductStats(); // Cập nhật lại thống kê
-    }
-  });
-});

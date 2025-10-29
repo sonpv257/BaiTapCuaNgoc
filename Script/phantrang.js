@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const table = document.querySelector(".product-table tbody");
+    const table = document.querySelector(".list-table tbody");
     if (!table) return;
 
     const rows = Array.from(table.querySelectorAll("tr"));
@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
             rows[i].style.display = "";
         }
 
-        info.innerHTML = `Hiển thị <b>${start + 1}</b> đến <b>${end}</b> trong <b>${totalRows}</b> sản phẩm`;
+        info.innerHTML = `Hiển thị <b>${start + 1}</b> đến <b>${end}</b> trong tổng <b>${totalRows}</b>`;
         renderPagination();
     }
 

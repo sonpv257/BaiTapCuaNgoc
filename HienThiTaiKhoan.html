@@ -5,8 +5,8 @@
 <head runat="server">
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sản Phẩm - Quản Trị Viên</title>
-    <link rel="stylesheet" href="HienThiSanPham.css" />
+    <title>Tài Khoản - Quản Trị Viên</title>
+    <link rel="stylesheet" href="HienThiTaiKhoan.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
 </head>
 
@@ -23,7 +23,7 @@
 
                 <nav class="main-menu">
                     <a href="#">Trang chủ|</a>
-                    <a href="#" class="active">Sản Phẩm</a>
+                    <a href="#" class="active">Tài Khoản</a>
                 </nav>
             </div>
 
@@ -52,11 +52,11 @@
             <!-- SIDEBAR -->
             <aside class="sidebar">
                 <div class="sidebar-nav">
-                    <a href="HienThiSanPham.html" class="side-item active">
+                    <a href="HienThiSanPham.html" class="side-item ">
                         <i class="fa-solid fa-table-list"></i>
                         <span>Sản Phẩm</span>
                     </a>
-                    <a href="HienThiTaiKhoan.html" class="side-item">
+                    <a href="HienThiTaiKhoan.html" class="side-item active">
                         <i class="fa-regular fa-user"></i>
                         <span>Tài Khoản</span>
                     </a>
@@ -66,75 +66,69 @@
             <!-- CONTENT -->
             <main class="content">
                 <div class="content-top">
-                    <div class="page-title">Danh sách sản phẩm</div>
+                    <div class="page-title">Danh sách tài khoản</div>
                 </div>
 
                 <div class="card">
-
                     <!-- THỐNG KÊ SẢN PHẨM -->
                     <div class="stats-container">
                         <div class="stat-box total">
-                            <i class="fa-solid fa-boxes-stacked"></i>
+                            <i class="fa-solid fa-users"></i>
                             <div class="stat-text">
-                                <p>Tổng sản phẩm</p>
+                                <p>Tổng tài khoản</p>
                                 <span>0</span>
                             </div>
                         </div>
 
                         <div class="stat-box in-stock">
-                            <i class="fa-solid fa-circle-check"></i>
+                            <i class="fa-solid fa-user-shield"></i>
                             <div class="stat-text">
-                                <p>Còn hàng</p>
+                                <p>Tổng quản trị viên</p>
                                 <span>0</span>
                             </div>
                         </div>
 
                         <div class="stat-box out-stock">
-                            <i class="fa-solid fa-circle-xmark"></i>
+                            <i class="fa-solid fa-user"></i>
                             <div class="stat-text">
-                                <p>Hết hàng</p>
+                                <p>Tổng người dùng</p>
                                 <span>0</span>
                             </div>
                         </div>
                     </div>
 
-
                     <!-- Tìm kiếm -->
                     <div class="table-toolbar">
                         <input type="text" class="search-input" placeholder="Tìm kiếm ...">
-                        <a class="btn btn-new" href="ThemSanPham.html">
+                        <a class="btn btn-new" href="ThemTaiKhoan.html">
                             <i class="fa-solid fa-plus"></i>
-                            Thêm Sản Phẩm
+                            Thêm Tài Khoản
                         </a>
                     </div>
 
+                    <!-- BẢNG TÀI KHOẢN -->
                     <table class="list-table">
                         <thead>
                             <tr>
                                 <th>STT</th>
-                                <th>Ảnh</th>
-                                <th>Tên SP</th>
-                                <th>Giá</th>
-                                <th>Thông tin Sp</th>
-                                <th>Ngày thêm Sp</th>
-                                <th>Trạng thái</th>
+                                <th>Tên tài khoản</th>
+                                <th>Tên đăng nhập</th>
+                                <th>Vai trò</th>
+                                <th>Email</th>
+                                <th>Số điện thoại</th>
+                                <th>Ngày đăng ký</th>
                                 <th class="w-action">Thao tác</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <!-- hàng sp-->
                             <tr>
                                 <td>1</td>
-                                <td class="prod">
-                                    <img src="https://picsum.photos/48?random=1" alt="pic">
-                                    <img src="https://picsum.photos/48?random=1" alt="pic">
-                                    <img src="https://picsum.photos/48?random=1" alt="pic">
-                                </td>
-                                <td>Điện thoại</td>
-                                <td>65.29d</td>
-                                <td>abc</td>
-                                <td>19 July, 2025</td>
-                                <td><span class="status active">Còn hàng</span></td>
+                                <td>Admin</td>
+                                <td>admin</td>
+                                <td>admin</td>
+                                <td>ad@example.com</td>
+                                <td>000000000</td>
+                                <td>01/01/2001</td>
                                 <td class="actions-cell">
                                     <a class="act" title="Xem"><i class="fa-regular fa-eye"></i></a>
                                     <a class="act" title="Sửa"><i class="fa-regular fa-pen-to-square"></i></a>
@@ -143,16 +137,12 @@
                             </tr>
                             <tr>
                                 <td>2</td>
-                                <td class="prod">
-                                    <img src="https://picsum.photos/48?random=1" alt="pic">
-                                    <img src="https://picsum.photos/48?random=1" alt="pic">
-                                    <img src="https://picsum.photos/48?random=1" alt="pic">
-                                </td>
-                                <td>Phụ kiện</td>
-                                <td>65.29d</td>
-                                <td>abc</td>
-                                <td>19 July, 2025</td>
-                                <td><span class="status inactive">Hết hàng</span></td>
+                                <td>Nguyễn Văn A</td>
+                                <td>nguyenvana</td>
+                                <td>user</td>
+                                <td>vana@example.com</td>
+                                <td>0123456789</td>
+                                <td>01/01/2001</td>
                                 <td class="actions-cell">
                                     <a class="act" title="Xem"><i class="fa-regular fa-eye"></i></a>
                                     <a class="act" title="Sửa"><i class="fa-regular fa-pen-to-square"></i></a>
@@ -161,16 +151,12 @@
                             </tr>
                             <tr>
                                 <td>3</td>
-                                <td class="prod">
-                                    <img src="https://picsum.photos/48?random=1" alt="pic">
-                                    <img src="https://picsum.photos/48?random=1" alt="pic">
-                                    <img src="https://picsum.photos/48?random=1" alt="pic">
-                                </td>
-                                <td>Máy tính</td>
-                                <td>65.29d</td>
-                                <td>abc</td>
-                                <td>19 July, 2025</td>
-                                <td><span class="status inactive">Hết hàng</span></td>
+                                <td>Trần Thị B</td>
+                                <td>tranthib</td>
+                                <td>user</td>
+                                <td>thib@example.com</td>
+                                <td>0123456789</td>
+                                <td>01/01/2001</td>
                                 <td class="actions-cell">
                                     <a class="act" title="Xem"><i class="fa-regular fa-eye"></i></a>
                                     <a class="act" title="Sửa"><i class="fa-regular fa-pen-to-square"></i></a>
@@ -249,55 +235,54 @@
             </div>
         </footer>
     </form>
-    <!-- ========== DIALOG XEM SẢN PHẨM ========== -->
+
+    <!-- === DIALOG XEM TÀI KHOẢN === -->
     <div id="dialogView" class="dialog-view">
         <div class="dialog-box">
             <div class="dialog-header">
-                <h3>Chi tiết sản phẩm</h3>
+                <h3>Chi tiết tài khoản</h3>
                 <button class="close-btn close-view">&times;</button>
             </div>
             <div class="dialog-body">
-                <div class="dialog-images" id="viewImages"></div>
-                <p><strong>Tên SP:</strong> <span id="viewName"></span></p>
-                <p><strong>Giá:</strong> <span id="viewPrice"></span></p>
-                <p><strong>Thông tin:</strong> <span id="viewDesc"></span></p>
-                <p><strong>Ngày thêm:</strong> <span id="viewDate"></span></p>
-                <p><strong>Trạng thái:</strong> <span id="viewStatus"></span></p>
+                <p><strong>Tên tài khoản:</strong> <span id="viewFullName"></span></p>
+                <p><strong>Tên đăng nhập:</strong> <span id="viewUsername"></span></p>
+                <p><strong>Vai trò:</strong> <span id="viewRole"></span></p>
+                <p><strong>Email:</strong> <span id="viewEmail"></span></p>
+                <p><strong>Số điện thoại:</strong> <span id="viewPhone"></span></p>
+                <p><strong>Ngày đăng ký:</strong> <span id="viewDate"></span></p>
             </div>
         </div>
     </div>
 
-    <!-- ========== DIALOG SỬA SẢN PHẨM ========== -->
-    <div id="dialogEdit" class="dialog-edit dialog active-fade">
+    <!-- === DIALOG SỬA TÀI KHOẢN === -->
+    <div id="dialogEdit" class="dialog-edit">
         <div class="dialog-box">
             <div class="dialog-header">
-                <h3>Sửa sản phẩm</h3>
+                <h3>Sửa thông tin tài khoản</h3>
                 <button class="close-btn close-edit">&times;</button>
             </div>
-
             <form id="editForm">
                 <div class="dialog-body">
-                    <label>Ảnh sản phẩm</label>
-                    <input type="file" id="editImageInput" accept="image/*" multiple>
-                    <div class="edit-images" id="editImages"></div>
+                    <label for="editFullName">Tên tài khoản</label>
+                    <input type="text" id="editFullName" required>
 
-                    <label>Tên SP</label>
-                    <input type="text" id="editName" required>
+                    <label for="editUsername">Tên đăng nhập</label>
+                    <input type="text" id="editUsername" readonly>
 
-                    <label>Giá</label>
-                    <input type="text" id="editPrice" required>
-
-                    <label>Thông tin SP</label>
-                    <textarea id="editDesc"></textarea>
-
-                    <label>Ngày thêm SP</label>
-                    <input type="text" id="editDate" readonly>
-
-                    <label>Trạng thái</label>
-                    <select id="editStatus">
-                        <option value="Còn hàng">Còn hàng</option>
-                        <option value="Hết hàng">Hết hàng</option>
+                    <label for="editRole">Vai trò</label>
+                    <select id="editRole">
+                        <option value="admin">Admin</option>
+                        <option value="user">User</option>
                     </select>
+
+                    <label for="editEmail">Email</label>
+                    <input type="email" id="editEmail" required>
+
+                    <label for="editPhone">Số điện thoại</label>
+                    <input type="text" id="editPhone" pattern="[0-9]{9,11}" title="Chỉ nhập số điện thoại hợp lệ">
+
+                    <label for="editDate">Ngày đăng ký</label>
+                    <input type="text" id="editDate" readonly>
                 </div>
 
                 <div class="dialog-footer">
@@ -308,15 +293,14 @@
         </div>
     </div>
 
-
-    <!-- ========== DIALOG XÓA SẢN PHẨM ========== -->
+    <!-- === DIALOG XÓA TÀI KHOẢN === -->
     <div id="dialogDelete" class="dialog-delete">
         <div class="dialog-box small">
             <div class="dialog-header">
                 <h3>Xác nhận xóa</h3>
             </div>
             <div class="dialog-body">
-                <p>Bạn có chắc muốn xóa sản phẩm </br><b id="deleteName"></b> ?</p>
+                <br>Bạn có chắc muốn xóa tài khoản </br><b id="deleteName"></b> ?</p>
             </div>
             <div class="dialog-footer">
                 <button id="confirmDelete" class="btn-delete">Xóa</button>
@@ -325,13 +309,13 @@
         </div>
     </div>
 
-    <!-- === Alert nhỏ góc phải === -->
+    <!-- === ALERT BOX === -->
     <div id="alertBox" class="alert-box"></div>
 
 </body>
 <script src="Script/phantrang.js"></script>
-<script src="Script/tong_sanpham.js"></script>
+<script src="Script/tong_taikhoan.js"></script>
 <script src="Script/timkiem.js"></script>
-<script src="Script/thaotac_sanpham.js"></script>
+<script src="Script/thaotac_taikhoan.js"></script>
 
 </html>

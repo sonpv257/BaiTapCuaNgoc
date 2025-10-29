@@ -5,8 +5,8 @@
 <head runat="server">
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Thêm Sản Phẩm - Quản Trị Viên</title>
-    <link rel="stylesheet" href="ThemSanPham.css" />
+    <title>Thêm Tài Khoản - Quản Trị Viên</title>
+    <link rel="stylesheet" href="ThemTaiKhoan.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
 </head>
 
@@ -23,7 +23,7 @@
 
                 <nav class="main-menu">
                     <a href="#">Trang chủ|</a>
-                    <a href="#" class="active">Thêm Sản Phẩm</a>
+                    <a href="#" class="active">Thêm Tài Khoản</a>
                 </nav>
             </div>
 
@@ -52,11 +52,11 @@
             <!-- SIDEBAR -->
             <aside class="sidebar">
                 <div class="sidebar-nav">
-                    <a href="HienThiSanPham.html" class="side-item active">
+                    <a href="HienThiSanPham.html" class="side-item ">
                         <i class="fa-solid fa-table-list"></i>
                         <span>Sản Phẩm</span>
                     </a>
-                    <a href="HienThiTaiKhoan.html" class="side-item">
+                    <a href="HienThiTaiKhoan.html" class="side-item active">
                         <i class="fa-regular fa-user"></i>
                         <span>Tài Khoản</span>
                     </a>
@@ -65,55 +65,64 @@
             <div class="sidebar-divider"></div>
             <!-- CONTENT -->
             <main class="content">
-                <div class="add-product-container">
-                    <form id="addProductForm">
-                        <!-- 🔹 Hàng ngang: Tên + Giá -->
+                <div class="add-account-container">
+                    <form id="addAccountForm">
                         <div class="form-row">
                             <div class="form-group half">
-                                <label for="tenSP">Tên sản phẩm</label>
-                                <input type="text" id="tenSP" required placeholder="Nhập tên sản phẩm..." />
+                                <label for="fullName">Họ và tên</label>
+                                <input type="text" id="fullName" required placeholder="Nhập họ tên..." />
                             </div>
 
                             <div class="form-group half">
-                                <label for="giaSP">Giá sản phẩm (VNĐ)</label>
-                                <input type="number" id="giaSP" min="0" required placeholder="Nhập giá..." />
+                                <label for="username">Tên đăng nhập</label>
+                                <input type="text" id="username" required placeholder="Nhập tên đăng nhập..." />
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group half">
+                                <label for="password">Mật khẩu</label>
+                                <input type="password" id="password" required placeholder="Nhập mật khẩu..." />
+                            </div>
+
+                            <div class="form-group half">
+                                <label for="role">Vai trò</label>
+                                <select id="role">
+                                    <option value="user">Người dùng</option>
+                                    <option value="admin">Quản trị viên</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group half">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" placeholder="Nhập email..." />
+                            </div>
+
+                            <div class="form-group half">
+                                <label for="phone">Số điện thoại</label>
+                                <input type="text" id="phone" pattern="[0-9]{9,11}"
+                                    placeholder="Nhập số điện thoại..." />
                             </div>
                         </div>
 
                         <div class="form-group">
-                            <label for="moTaSP">Mô tả sản phẩm</label>
-                            <textarea id="moTaSP" placeholder="Nhập thông tin mô tả..."></textarea>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="anhSP">Ảnh sản phẩm</label>
-                            <input type="file" id="anhSP" accept="image/*" multiple />
-
-                            <!-- Khung preview -->
-                            <div id="preview-container" class="preview-list"></div>
-
-                        </div>
-
-
-                        <div class="form-group">
-                            <label for="trangThai">Trạng thái</label>
-                            <select id="trangThai">
-                                <option value="Còn hàng">Còn hàng</option>
-                                <option value="Hết hàng">Hết hàng</option>
-                            </select>
+                            <label for="address">Địa chỉ</label>
+                            <textarea id="address" placeholder="Nhập địa chỉ..."></textarea>
                         </div>
 
                         <div class="form-actions">
-                            <button type="button" class="btn-back" onclick="window.location.href='HienThiSanPham.html'">
+                            <button type="button" class="btn-back"
+                                onclick="window.location.href='HienThiTaiKhoan.html'">
                                 <i class="fa-solid fa-arrow-left"></i> Quay lại
                             </button>
                             <button type="submit" class="btn-submit">
-                                <i class="fa-solid fa-save"></i> Lưu sản phẩm
+                                <i class="fa-solid fa-save"></i> Lưu Tài Khoản
                             </button>
                         </div>
                     </form>
                 </div>
-
             </main>
         </div>
 
@@ -184,6 +193,5 @@
         </footer>
     </form>
 </body>
-<script src="Script/anh.js"></script>
 
 </html>

@@ -259,7 +259,7 @@ header {
 }
 
 /* ===== FORM THÊM SẢN PHẨM ===== */
-.add-product-container {
+.add-account-container {
     background   : var(--white);
     padding      : 30px;
     margin       : 40px auto;
@@ -267,7 +267,7 @@ header {
     box-shadow   : 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-.add-product-container h2 {
+.add-account-container h2 {
     text-align   : center;
     color        : var(--dark);
     margin-bottom: 20px;
@@ -291,8 +291,7 @@ header {
     border       : 1px solid var(--border);
     border-radius: 8px;
     font-size    : 15px;
-    border       : 1px solid var(--muted);
-
+    border: 1px solid var(--muted);           
 }
 
 .form-group textarea {
